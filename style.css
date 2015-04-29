@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+div.hover:hover {
+    background-color: rgba(0,255,0,0.5);
+  -moz-box-shadow: inset 0px 0px 35px #f5edf5;
+  -webkit-box-shadow: inset 0px 0px 35px #f5edf5;
+  box-shadow: inset 0px 0px 35px #000000;
+}
+
+.fixed h1{
+  position: fixed;
+  left: 80%;
+  top: 20%;
+  width: 20%;
+  background-color: transparent;
+  color: transparent;
+}
+.fixed:hover h1{
+  background-color: blue;
+  color: white;
+}
+.center:hover{
+  justify-content: center;
+  display: flex;
+}
+.around:hover{
+  justify-content: space-around;
+  display: flex;
+}
+.between:hover{
+  justify-content: space-between;
+  display: flex;
+}
+.justify div{
+  min-height: 154px;
+}
+
+
+.shadows{
+  text-shadow: 0 0 14px rgb(0,0,255);
+}
+.blur:hover{
+  color: transparent;
+  text-shadow: 0 0 4px rgb(0,0,255);
+}
+.intense:hover{
+  text-shadow: 0 0 14px rgb(0,0,255),
+  2px 2px 14px rgb(0,0,255),
+  -2px -2px 14px rgb(0,0,255);
+}
+.solid:hover{
+  text-shadow: -1px 1px 0px rgb(0,0,255),
+   -2px 2px 0px rgb(0,0,255),
+   -3px 3px 0px rgb(0,0,255);
+}
+.box:hover{
+  box-shadow: 0 0 14px rgb(0,0,255),
+  2px 2px 14px rgb(0,0,255),
+  -2px -2px 14px rgb(0,0,255);
+}
+.inset:hover{
+  box-shadow:inset 0 0 14px rgb(0,0,255),
+  inset 2px 2px 14px rgb(0,0,255),
+  inset -2px -2px 14px rgb(0,0,255);
+}
+.multi:hover{
+ background: -webkit-linear-gradient(left, 
+  rgba(0,4,255,1) 0%,
+  rgba(229,234,255,1) 43%,
+  rgba(252,254,255,1) 58%,
+  rgba(255,0,0,1) 100%);
+}
+.circular:hover{
+  box-shadow: none;
+  background: -webkit-radial-gradient(center, ellipse cover, 
+    rgba(0,4,255,1) 17%,
+    rgba(229,234,255,1) 46%,
+    rgba(252,254,255,1) 44%,
+    rgba(255,0,0,1) 78%);
+  border-radius: 100%;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  padding-top: 75px;
+}
+.varying:hover{
+  width: 50%;
+  margin-left: 25%;
+  background-image: url(http://media.giphy.com/media/5xtDarBwQyYBPHnW2ek/giphy.gif);
+  border-radius: 200px 0px 200px 0px;
+}
+.varying:hover h1{
+  border-radius: 200px 0px 200px 0px;
+  background: -webkit-linear-gradient(left, 
+    rgba(0,4,255,0.5) 0%,
+    rgba(229,234,255,0.5) 43%,
+    rgba(252,254,255,0.5) 58%,
+    rgba(255,0,0,0.5) 100%);
+}
+.cursors:hover{
+  cursor: url(/cursors/radioactive-set_normalselect.cur), auto;
+}
+
+
+.transforms div{
+  background-color: green;
+  width: 200px;
+  height: 75px;
+  margin-left: calc(50% - 100px);
+}
+.scale:hover {
+  transform: scale(2,2);
+}
+.rotate:hover {
+  transform: rotate(45deg);
+}
+.translate:hover {
+  transform: translate(10px, 20px);
+}
+.skew:hover {
+  transform: skew(45deg);
+}
+.rotatetwo:hover {
+  transform: rotateY(180deg);
+}
+.rotatethree:hover {
+  transform: rotateY(45deg);
+}
+.perspective:hover {
+  transform: perspective(50em) rotateX(50deg);
+}
+
+
+.transitions{
+  width:  200px;
+  height: 300px;
+  background: blue;
+  padding-top: calc(50% - 40px);
+  transition: All 2s ease;
+}
+.back{
+  width:  200px;
+  height: 300px;
+  margin-left: 20%;
+  background: url(http://media.giphy.com/media/5xtDarBwQyYBPHnW2ek/giphy.gif);
+  transition: All 2s ease;
+}
+
+.first:hover .transitions{
+  background-color: rgba(0,0,255,0.0);
+  color: white;
+  text-shadow: 0 0 14px black,
+    -2px -2px 14px black,
+    2px 2px 14px black;
+  width:  400px;
+  height: 400px;
+  border-radius: 100%;
+  box-shadow:0px 0px 35px #fff;
+
+}
+.first:hover .back{
+  width:  400px;
+  height: 400px;
+  border-radius: 100%;
+  margin-left: 50%;
+  margin-top: 5%;
+  transform: rotate(180deg);
+  transform: perspective(180em) rotatey(180deg);
+}
+.animations:hover {
+  box-shadow: none;
+  -webkit-animation:animation-name 5s infinite;
+}
+#sky{
+  width: 400%;
+  margin-left: -20px;
+  height: 1000px;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation:sky 40s infinite;
+}
+#sun{
+  transform: translate(20px, 363px);
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+
+  background: url(http://www.clker.com/cliparts/9/Z/3/E/N/K/sun-hi.png);
+  background-size: 100%;
+  translate: All 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation:sun 40s infinite;
+  border-width:10px;
+}
+
+#ocean{
+  display:flex;
+  justify-content: center;
+  position: absolute;
+  left: -4000px;
+  border-radius: 100%;padding: 250px;
+  height: 10000px;
+  width: 10000px;
+  -webkit-animation:ocean 640s infinite;
+  background: url(http://eventidegrille.com/wp-content/uploads/2013/11/ocean-background-brandon-bourdages.jpg);
+  background-size: 22%;
+}
+.clouds{
+  opacity: 0.7;
+    width: 247px;
+  height: 90px;
+  background: url(http://www.scri8e.com/stars/PNG_Clouds/zc06.png?filename=./zc06.png&w0=800&h0=289&imgType=3&h1=50&w1=140);
+  background-size: 100%;
+}
+#stars{
+  margin-top: 0px;
+  float: left;
+  width: 1000px;
+  height: 1000px;
+  background-image: url("http://www.echo-spacemission.com/ryan/wp-content/uploads/2013/03/star-tile-far-away.jpg");
+  -webkit-animation:stars 40s infinite;
+}
+#boat{
+  background: url(http://cliparts.co/cliparts/rTj/GLa/rTjGLapGc.png);
+  background-size: 100%;
+  height: 135px;
+  width: 147px;
+  margin-left: 947px;
+  margin-top: -84px;
+  transition: All 1s;
+  -webkit-animation:beach 10s infinite;
+}
+#one{
+  transform: translate(20px, -45px);
+  -webkit-animation:cloudone 165s infinite;
+}
+#two{
+  transform: translate(200px, 0px) scale(1.3,1.4);
+  -webkit-animation:cloudone 155s infinite;
+}
+#three{
+  transform: translate(120px, 45px) scale(1.5,1.2);
+  -webkit-animation:cloudone 160s infinite;
+}
+#four{
+  transform: translate(750px, 1px) scale(1.7, 1.5);
+  -webkit-animation:cloudone 140s infinite;
+}
+#birds{
+  background-image: url(https://31.media.tumblr.com/883447f0eba3c4eff4726be5cda3bd5a/tumblr_mieq9nVUdg1rgpyeqo1_500.gif);
+  background-size: 100%;
+  padding-top: 40px;
+  height: 191px;
+  margin-top: -253px;
+  width: 252px;
+  -webkit-animation:birds 20s infinite;
+}
+div#birds:hover{
+  box-shadow: none;
+  background-color: none;
+  cursor: url(/cursors/reticlebm7.png), auto;
+
+}
+#beach{
+  width:9750px;
+  height: 9750px;
+  border-radius: 100%;
+  border: 40px solid #dda;
+  box-shadow: 0 0 14px #dda,
+    3px 3px 14px #dda,
+    -3px -3px 14px #dda;
+  background: url(http://www.playmakerfootballtowels.com/wp-content/uploads/2012/06/Grass-Background.2-1024x640.jpg);
+  background-size: 70px;
+  -webkit-animation:boat 940s infinite;
+}
+
+#missile{
+  margin-left: 250px;
+  margin-top: 75px;
+  height: 50px;
+  width: 100px;
+  transform: rotate(-135deg);
+  background-image: url(http://fc07.deviantart.com/fs38/f/2008/339/2/9/Missile_1_by_Trekkie313.png);
+  background-size: 100%;
+  transition: All 0.1s;
+  opacity:0;
+}
+#birds:hover #missile{
+  -webkit-animation:missile 10s infinite;
+}
+@-webkit-keyframes sky
+{
+0%    {background-color: #339 }
+25%   {background-color: blue }
+50%   {background-color: blue }
+75%   {background-color: #004 }
+100%  {background-color: #2222aa }
+}
+@-webkit-keyframes sun
+{
+0%    {transform: translate(-500px,500px); }
+100%    {transform: translate(1700px,-200px); }
+}
+
+@-webkit-keyframes cloudone
+{
+0%    {transform: translateX(-500px) scale(2.3,1.9); }
+100%    {transform: translateX(1999px) scale(2.3,1.9); }
+}
+@-webkit-keyframes cloudtwo
+{
+0%    {transform: translateX(-500px) scale(1.3,1.4); }
+100%    {transform: translateX(2400px) scale(1.3,1.4); }
+}
+@-webkit-keyframes cloudthree
+{
+0%    {transform: translateX(-500px) scale(1.5,1.2); }
+100%    {transform: translateX(2700px) scale(1.5,1.2); }
+}
+@-webkit-keyframes cloudfour
+{
+0%    {transform: translateY(-500px) scale(1.7, 1.5); }
+100%    {transform: translateY(2500px) scale(1.7, 1.5); }
+}
+@-webkit-keyframes stars
+{
+0%    {opacity: 0; }
+50%   {opacity: 0; }
+75%  {opacity: 1; }
+100%  {opacity: 0; }
+}
+@-webkit-keyframes ocean
+{
+0%    {transform: rotate(0deg);}
+100%  {transform: rotate(360deg);}
+}
+@-webkit-keyframes beach
+{
+0%    {transform: rotate(0deg);}
+100%  {transform: rotate(-360deg);}
+}
+@-webkit-keyframes boat
+{
+0%    {transform: rotate(-20deg) translate(0px, 0px) rotateX(-20deg) perspective( 50px );}
+50%    {transform: rotate(20deg) translate(0px, 0px) rotateX(20deg) perspective( 50px );}
+100%  {transform: rotate(-20deg) translate(0px, 0px) rotateX(-20deg) perspective( 50px );}
+}
+@-webkit-keyframes birds
+{
+0%    {transform: translateX(2000px);}
+100%  {transform: translateX(-460px);}
+}
+@-webkit-keyframes missile
+{
+0%    {opacity:1; transform:  translate(250px, 440px);}
+50%   {opacity:1; transform:  translate(0px, 0px);}
+100%  {opacity:1; transform:  rotate(-45deg) translate(150px, 530px);}
+}
